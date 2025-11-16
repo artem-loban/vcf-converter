@@ -10,12 +10,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
+  overflow-y: auto;
 }
 
 .card {
   padding: 2em;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.upload-section {
+  margin-bottom: 2em;
+}
+
+.upload-button {
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.upload-button:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+}
+
+.upload-button:active {
+  transform: translateY(0);
 }
 
 button {
@@ -40,9 +70,116 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.download-button {
+  background-color: #28a745;
+  margin-left: 1em;
+}
+
+.download-button:hover {
+  background-color: #218838;
+  border-color: #218838;
+}
+
+.clear-button {
+  background-color: #dc3545;
+  margin-left: 1em;
+}
+
+.clear-button:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+}
+
+.contacts-info {
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.contacts-list {
+  margin-top: 2em;
+  text-align: left;
+}
+
+.contacts-list h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+.contacts-table {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1.5fr 1fr;
+  gap: 1em;
+  padding: 1em;
+  background-color: rgba(100, 108, 255, 0.2);
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1.5fr 1fr;
+  gap: 1em;
+  padding: 0.8em 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s;
+}
+
+.table-row:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row > div {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.hint {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9em;
+  margin-top: 2em;
+}
+
 code {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 2px 6px;
   border-radius: 4px;
+}
+
+/* Скролбар для таблиці */
+.contacts-table::-webkit-scrollbar {
+  width: 8px;
+}
+
+.contacts-table::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.contacts-table::-webkit-scrollbar-thumb {
+  background: rgba(100, 108, 255, 0.5);
+  border-radius: 4px;
+}
+
+.contacts-table::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 108, 255, 0.7);
 }
 
