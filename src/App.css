@@ -183,3 +183,32 @@ code {
   background: rgba(100, 108, 255, 0.7);
 }
 
+.payment-message {
+  text-align: center;
+  padding: 3em 2em;
+}
+
+.payment-message h1 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  color: #ff6b6b;
+}
+
+.payment-message p {
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-number {
+  font-size: 1.8em;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1em 2em;
+  border-radius: 12px;
+  border: 2px solid rgba(100, 108, 255, 0.5);
+  display: inline-block;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
